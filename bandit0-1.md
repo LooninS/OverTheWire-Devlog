@@ -11,5 +11,5 @@ Let use cat to view the contents of the readme file.
 ```bash
 cat readme
 ```
+`cat` is a shell command for writing the content of a file or input stream to STDOUT.
 ***
-
