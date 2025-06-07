@@ -26,5 +26,6 @@ Level 0
 Goal: SSH into the server and find the password for the next level
 ```bash
 man ssh # check the commands
-ssh bandit0@bandit.labs.overthewire.org -p 2220```
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+```
 
