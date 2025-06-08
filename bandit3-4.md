@@ -8,7 +8,7 @@ Hidden files are files that often start with a period(.) and hidden in most file
 bandit3@bandit:~$ ls inhere
 ```
 But don't get any output. Does that mean there are no files in 'inhere' directory?
-No, if we were to use the -a(for all) flag, we get the following:
+No, if I were to use the -a(for all) flag, I get the following:
 ```bash
 bandit3@bandit:~$ ls -a inhere
 .  ..  ...Hiding-From-You
