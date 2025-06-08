@@ -4,7 +4,7 @@
 The password for the next level is stored in a file called - located in the home directory
 ***
 ## Approach
-First I tried doing the same thing I did last time:
+Naturally, I went with the method I used previously.
 ```bash
 cat - 
 ```
