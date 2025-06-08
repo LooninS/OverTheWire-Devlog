@@ -8,13 +8,13 @@ Let check the files inside of inhere directory.
 bandit4@bandit:~$ ls inhere
 -file00  -file01  -file02  -file03  -file04  -file05  -file06  -file07	-file08  -file09
 ```
-We can simply `cat` eaach file one-by-one but that's a brute force solution. So, what else can we do? 
-We also know that the file is human-readable i.e. a text file. We can use the `file` command to check the filetype of each file.
+I can simply `cat` eaach file one-by-one but that's a brute force solution. So, what else can I do? 
+I also know that the file is human-readable i.e. a text file. We can use the `file` command to check the filetype of each file.
 ```bash
 bandit4@bandit:~$ file inhere/-file00
 inhere/-file00: PGP Secret Sub-key -
 ```
-We can also perform the operation recursively.
+I can also perform the operation recursively.
 ```bash
 bandit4@bandit:~$ file inhere/*
 inhere/-file00: PGP Secret Sub-key -
