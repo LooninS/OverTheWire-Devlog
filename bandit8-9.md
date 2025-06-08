@@ -5,8 +5,8 @@ The password for the next level is stored in the file data.txt and is the only l
 ### Approach
 I have absolutely no idea how to do it and I dont know any of the commands given in "Commands you may need to solve this level" section. 
 
-Naturally, I asked ChatGPT to tell me a little bit about each of them. But that took too long. So, I decided to use `man` instead. 
-It seems that `uniq` is closest to what we need
+Naturally, I asked ChatGPT to tell me a little bit about each of them. It seems that `uniq` is closest to what we need. So, I decided to use `man` it. 
+
 ```markdown
 UNIQ(1)                                                                             
 
