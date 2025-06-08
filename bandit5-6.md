@@ -21,7 +21,7 @@ Well, that was easy. It seem checking only two parameter were enough. Lets verif
 bandit5@bandit:~$ find . -type f -size 1033c ! -executable -exec file {} + | grep "text"
 ./inhere/maybehere07/.file2: ASCII text, with very long lines (1000)
 ```
-Here, `-exec file {} +` runs the `file` command over the output of the `find` command and output the filetypes anf `| grep "text"` "text": filters the output of file to only show entries that contain the word “text”. Now, we know that `./inhere/maybehere07/.file2` is human-readable, 1033 bytes and non-executable. All that's let to done is to `cat` the file
+Here, `-exec file {} +` runs the `file` command over the output of the `find` command and output the filetypes anf `| grep "text"` "text": filters the output of file to only show entries that contain the word “text”. Now, we know that `./inhere/maybehere07/.file2` is human-readable, 1033 bytes and non-executable. Now, just  `cat` the file
 ```bash
 bandit5@bandit:~$ cat ./inhere/maybehere07/.file2
 ```
