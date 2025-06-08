@@ -13,7 +13,7 @@ UNIQ(1)
 NAME
        uniq - report or omit repeated lines
 ```
-So I went ahead and did
+So I went ahead and did this
 ```bash
 bandit8@bandit:~$ uniq -u data.txt #-u or --unique only print unique lines
 ```
@@ -25,7 +25,7 @@ Let use man again
 DESCRIPTION
        Filter adjacent matching lines from INPUT (or standard input), writing to OUTPUT (or standard output).
 ```
-It seems it can only filter adjacent matching lines, and therefore data.txt  must be sorted first. Obviously for that we use `sort` command 
+It seems it can only filter adjacent matching lines, and therefore data.txt must be sorted first. Obviously for that we use `sort` command 
 
 ```bash
 bandit8@bandit:~$ sort data.txt
