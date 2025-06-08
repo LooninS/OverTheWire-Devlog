@@ -30,7 +30,7 @@ It seems it can only filter adjacent matching lines, and therefore data.txt  mus
 ```bash
 bandit8@bandit:~$ sort data.txt
 ```
-Then I piped the output of `sort` to to `uniq` 
+Then I piped the output of `sort` to `uniq` 
 ```bash
 bandit8@bandit:~$ sort data.txt | uniq -u
 ```
