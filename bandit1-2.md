@@ -13,7 +13,8 @@ The `-` interpreted as a cmd-line option by the shell, not as a filename, simila
 But how do we get it to actully work?
 
 **Using relative path** will tell the shell to treat `-` as a filename instead of option.
-    ```bash 
+
+```bash 
     cat ./-
-    ```
+```
 ***

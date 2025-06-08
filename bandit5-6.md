@@ -2,9 +2,9 @@
 ## Level Goal
 The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:
 
-    human-readable
-    1033 bytes in size
-    not executable
+- human-readable
+- 1033 bytes in size
+- not executable
 ***
 ### Approach
 The `find` command is used to find files/directories. But since I have no idea how to use it so
