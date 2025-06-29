@@ -17,7 +17,9 @@ bandit2@bandit:~$ cat 'spaces in this filename'
 ```
 ***
 ## Key Takeaway 
-*Problem*: Spaces in filenames break shell parsing
-*Solution*: Use quotes to group words into single argument
+*Problem*: Spaces in filenames break shell parsing.
+
+*Solution*: Use quotes to group words into single argument.
+
 *Command*: `cat 'filename with spaces'`
 ***
