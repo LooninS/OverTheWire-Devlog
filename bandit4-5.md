@@ -2,19 +2,19 @@
 ## Level Goal
 The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.
 ***
-### Approach
-Let check the files inside of inhere directory.
+## Approach
 ```bash
 bandit4@bandit:~$ ls inhere
 -file00  -file01  -file02  -file03  -file04  -file05  -file06  -file07	-file08  -file09
 ```
-I can simply `cat` eaach file one-by-one but that's a brute force solution. So, what else can I do? 
-I also know that the file is human-readable i.e. a text file. We can use the `file` command to check the filetype of each file.
+There are 10 files in the directory, but only one is human-readable i.e a text file.
+I have the option to use a brute force approach to find the password by `cat`ing each file one-by-one, but that is not very efficient.
+It's much more efficient to use `file` command to check the type of the file and then use `cat` to view the contents.
 ```bash
 bandit4@bandit:~$ file inhere/-file00
 inhere/-file00: PGP Secret Sub-key -
 ```
-I can also perform the operation recursively.
+Now, let's preform the same operation on all the files in the directory. The `*` wildcard will match all the files in the directory.
 ```bash
 bandit4@bandit:~$ file inhere/*
 inhere/-file00: PGP Secret Sub-key -
@@ -28,7 +28,8 @@ inhere/-file07: ASCII text
 inhere/-file08: data
 inhere/-file09: data
 ```
-Use `cat` with the either the relative path or full path.
+Now, let's use `cat` to view the contents of the human-readable file.
 ```bash
 bandit4@bandit:~$ cat inhere/-file07
 ```
+***
