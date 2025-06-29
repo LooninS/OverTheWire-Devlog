@@ -6,17 +6,19 @@ The password for the next level is stored in a file called - located in the home
 ## Approach
 Naturally, I went with the method I used previously.
 ```bash
-cat - 
+bandit1@bandit:~$ ls
+-
+bandit1@bandit:~$ cat -
 ```
-But this doesnt seem to work. Why?
+Why does it not work the file is right there, I even checked it with `ls`.
+For many commands, `command -` means "read from STDIN" and when the terminal see `-` is thinks, "Ah, it's a option. not a filename"
+So, how did I actually get it to work? There are lots of ways I found these:
 
-The `-` interpreted as a cmd-line option by the shell, not as a filename, similar to how -p(to specify port) used during ssh. So using `cat -` tells cat that  to read STDIN instead of the filename.
-
-So, how did I actually get it to work?
-
-**Using relative path** will tell the shell to treat `-` as a filename instead of option.
-
-```bash 
-cat ./-
-```
-***
+1. Using `./` will explicitly tell the shell, "this is a path" 
+    ```bash 
+    cat ./-
+    ```
+2. Using `--` can also work like so
+    ```bash
+    cat -- -
+    ```

@@ -2,10 +2,15 @@
 ## Level Goal
 The password for the next level is stored in the file data.txt, which contains base64 encoded data
 ### Approach
-I'll be using `base64` command to get the password from the encoded text file.
 ```bash
 bandit10@bandit:~$ base64 -d data.txt #-d flag decode the encoded text
 ```
+- `base64` - Built-in Linux utility for base64 operations
+- `-d` flag - Decode mode (default is encode)
+- `data.txt` - Input file
+***
+## How This Work?
+- **Base64 encoding**: It is a method to encode data using 64 character(A-Z, a-z, 0-9, +, /). It often end with `==` or `=`
 ***
 
 <details>

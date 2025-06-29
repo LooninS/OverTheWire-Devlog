@@ -13,3 +13,18 @@ cat readme
 ```
 `cat` is a shell command for writing the content of a file or input stream to STDOUT.
 ***
+## Key Learning Points
+### Commands Learned
+
+`ssh` - Secure Shell for remote login
+`ls` - List directory contents
+`pwd` - Print working directory
+`cat` - Display file contents
+`exit` - Exit current shell session
+
+Important Concepts
+
+1. *SSH Connection*: Always use port 2220 for Bandit challenges
+2. *File Reading*: Multiple ways exist to read file contents in Linux
+3. *Password Format*: Bandit passwords are typically 32-character alphanumeric strings
+4. *Home Directory*: The ~ symbol represents the user's home directory
