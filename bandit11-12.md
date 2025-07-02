@@ -3,7 +3,7 @@
 The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
 ***
 ## Understanding ROT13
-How it works: Each letter shifted 13 positions in alphabet
+How it works: Each letter is shifted 13 positions in the alphabet.
 - A → N, B → O, C → P... Z → M
 - Since alphabet has 26 letters, ROT13 is its own inverse
 - Numbers and symbols remain unchanged

@@ -6,8 +6,7 @@ The password for the next level is stored in a file called readme located in the
 ```bash
 ssh bandit1@bandit.labs.overthewire.org -p 2220 #login to the level
 ```
-In each of the level we have to find the file containing password to next level. The name of given file in this level is readme. 
-Let use cat to view the contents of the readme file.
+In each level, we have to find the file containing the password for the next level. The name of the file in this level is `readme`. Let's use `cat` to view the contents of the `readme` file.
 ```bash
 cat readme
 ```
@@ -25,6 +24,6 @@ cat readme
 Important Concepts
 
 1. *SSH Connection*: Always use port 2220 for Bandit challenges
-2. *File Reading*: Multiple ways exist to read file contents in Linux
+2. *File Reading*: Multiple ways exist to read the contents of a file in Linux
 3. *Password Format*: Bandit passwords are typically 32-character alphanumeric strings
 4. *Home Directory*: The ~ symbol represents the user's home directory
