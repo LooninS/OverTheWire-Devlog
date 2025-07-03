@@ -7,7 +7,7 @@ The password for the next level can be retrieved by submitting the password of t
 
 ## Commands Used
 
-- `echo`: Used to output the current password.
+- `cat`: To print the current password.
 - `nc` (netcat): Used to establish a network connection and send data.
 
 ***
@@ -20,13 +20,14 @@ The password for the next level can be retrieved by submitting the password of t
 
 Example command:
 ```bash
-echo <current_password> | nc localhost 30000
+cat /etc/bandit_pass/bandit14 | nc localhost 30000
 ```
 
 ***
 
 ## Key Concepts
 
-- **Netcat (`nc`)**: A versatile networking utility used for reading from and writing to network connections.
+- **Netcat (`nc`)**: netcat (often abbreviated to nc) is a computer networking utility for reading from and writing to network connections using TCP or UDP.
 - **Piping (`|`)**: Used to redirect the output of one command as the input to another command.
-- **`localhost`**: Refers to the local machine, meaning the connection is made to the same computer you are currently on.
+- **`localhost`**: It is a hostname that refers to the local machine.
+- **Ports**: Ports are used to identify specific services or applications running on a computer. 
