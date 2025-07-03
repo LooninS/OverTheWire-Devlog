@@ -1,21 +1,35 @@
+<<<<<<< HEAD
 # Bandit Level 4 → Level 5
 
 ## Level Goal
 
 The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.
+=======
+# Bandit Level 7 → Level 8
+
+## Level Goal
+
+The password for the next level is stored in the file data.txt next to the word millionth
+>>>>>>> ccf94c3 (standarizing the filenames)
 
 ***
 
 ## Commands Used
 
+<<<<<<< HEAD
 - `ls`: List directory contents
 - `file`: Determine file type
 - `cat`: Display file contents
+=======
+- `cat`: Display file contents
+- `grep`: Search for patterns in files
+>>>>>>> ccf94c3 (standarizing the filenames)
 
 ***
 
 ## Approach
 
+<<<<<<< HEAD
 ```bash
 bandit4@bandit:~$ ls inhere
 -file00  -file01  -file02  -file03  -file04  -file05  -file06  -file07	-file08  -file09
@@ -45,10 +59,30 @@ Now, let's use `cat` to view the contents of the human-readable file.
 ```bash
 bandit4@bandit:~$ cat inhere/-file07
 ```
+=======
+This one is pretty easy. I solved it using `grep` which I have already used to solve previous levels. 
+This is my solution:
+```bash
+bandit7@bandit:~$ cat data.txt  | grep "millionth"
+```
+The `cat` command display all the contents of `data.txt`, then `|` operator takes the output of cat command and give it to `grep` command, which displays the lline with the word 'millionth'
+>>>>>>> ccf94c3 (standarizing the filenames)
 
 ***
 
 ## Key Concepts
 
+<<<<<<< HEAD
 - **File Type Identification**: The `file` command is a powerful utility to determine the type of a file, which is more reliable than just relying on file extensions.
 - **Wildcards**: The `*` wildcard can be used to match all files in a directory, which is useful for running commands on multiple files at once.
+=======
+- **Piping (`|`)**: This level reinforces the concept of piping the output of one command as the input to another, a fundamental aspect of shell scripting for data processing.
+- **`grep` for Pattern Matching**: The `grep` command is essential for searching and filtering text based on patterns, making it highly useful for extracting specific information from files.
+
+<details>
+  <summary>Click to reveal spoiler</summary>
+
+  The password is dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+</details>
+
+>>>>>>> ccf94c3 (standarizing the filenames)
