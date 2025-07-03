@@ -1,21 +1,31 @@
 # Bandit Level 10 → Level 11
+
 ## Level Goal
+
 The password for the next level is stored in the file data.txt, which contains base64-encoded data.
-### Approach
+
+***
+
+## Commands Used
+
+- `base64`: Built-in Linux utility for base64 operations
+
+***
+
+## Approach
+
 ```bash
-bandit10@bandit:~$ base64 -d data.txt #-d flag decode the encoded text
+base64 -d data.txt
 ```
-- `base64` - Built-in Linux utility for base64 operations
-- `-d` flag - Decode mode (default is encode)
-- `data.txt` - Input file
+
 ***
-## How Does This Work?
-- **Base64 encoding**: It is a method to encode data using 64 characters (A-Z, a-z, 0-9, +, /). It often ends with `==` or `=`.
-***
+
+## Key Concepts
+
+- **Base64 Encoding/Decoding**: Understanding Base64 as a common encoding scheme for binary data, often used for transmitting data over mediums that only support text. The `base64` command provides a straightforward way to encode and decode such data.
 
 <details>
   <summary>Click to reveal spoiler</summary>
 
   The password is dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr 
 </details>
-

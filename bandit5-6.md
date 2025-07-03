@@ -1,12 +1,26 @@
 # Bandit Level 5 → Level 6
+
 ## Level Goal
+
 The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:
 
 - human-readable
 - 1033 bytes in size
 - not executable
+
 ***
-### Approach
+
+## Commands Used
+
+- `find`: Search for files in a directory hierarchy
+- `man`: Display the manual for a command
+- `grep`: Print lines that match patterns
+- `cat`: Display file contents
+
+***
+
+## Approach
+
 Started completely blind on the `find` command syntax. Time to RTFM.
 ```bash
 bandit5@bandit:~$ man find
@@ -31,7 +45,14 @@ The `-exec file {} +` runs the `file` command over the output of the `find` comm
 ```bash
 bandit5@bandit:~$ cat ./inhere/maybehere07/.file2
 ```
+
 ***
+
+## Key Concepts
+
+- **File Attribute-Based Searching**: This level demonstrates how to search for files based on their metadata (like size and permissions) rather than their name or content. The `find` command is the primary tool for this.
+- **Command Chaining and Filtering**: The solution showcases the power of combining commands. The output of `find` is piped to `grep` to filter the results, and the `-exec` option is used to run `file` on the results of `find`. This is a common and powerful pattern in the shell.
+
 <details>
   <summary>Click to reveal spoiler</summary>
 

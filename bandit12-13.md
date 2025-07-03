@@ -2,6 +2,30 @@
 ## Level Goal
 The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work. Use mkdir with a hard to guess directory name. Or better, use the command “mktemp -d”. Then copy the datafile using cp, and rename it using mv (read the manpages!)
 ***
+## Commands Used
+
+**File Analysis**
+
+- `file filename` - Determines file type
+- `xxd -r filename` - Reverse hexdump to binary
+
+**Compression Tools**
+
+- `gzip -d filename.gz` - Decompress gzip files
+- `bzip2 -d filename.bz2` - Decompress bzip2 files
+- `tar -xf filename.tar` - Extract tar archives
+
+**File Management**
+
+- `mv oldname newname` - Rename files
+- `cp source destination` - Copy files
+- `mktemp -d` - Create temporary directory
+***
+## Key Concepts
+- **File Decompression:** This level involves multiple layers of compression. The key is to use the `file` command to identify the compression type (gzip, bzip2, tar) and then use the appropriate tool (`gzip -d`, `bzip2 -d`, `tar -xf`) to decompress it.
+- **Hexdump:** The initial file is a hexdump. `xxd -r` is used to revert the hexdump back to its binary representation.
+- **Temporary Directories:** Using `/tmp` with `mktemp -d` is a standard practice for creating a temporary workspace.
+***
 ## Approach
 Since I don't have write permissions in the home directory, I need to work in /tmp and copy the file to /tmp:
 ```bash
@@ -49,24 +73,6 @@ Repeat these steps few more times till
 bandit12@bandit:/tmp/tmp.1R5Z6bTAnG$ file daata
 daata: ASCII text
 ```
-***
-## Key Commands Used
-### File Analysis
-
-- `file filename` - Determines file type
-- `xxd -r filename` - Reverse hexdump to binary
-
-### Compression Tools
-
-- `gzip -d filename.gz` - Decompress gzip files
-- `bzip2 -d filename.bz2` - Decompress bzip2 files
-- `tar -xf filename.tar` - Extract tar archives
-
-### File Management
-
-- `mv oldname newname` - Rename files
-- `cp source destination` - Copy files
-- `mktemp -d` - Create temporary directory
 ***
 <details>
   <summary>Click to reveal spoiler</summary>

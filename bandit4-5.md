@@ -1,8 +1,21 @@
 # Bandit Level 4 → Level 5
+
 ## Level Goal
+
 The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.
+
 ***
+
+## Commands Used
+
+- `ls`: List directory contents
+- `file`: Determine file type
+- `cat`: Display file contents
+
+***
+
 ## Approach
+
 ```bash
 bandit4@bandit:~$ ls inhere
 -file00  -file01  -file02  -file03  -file04  -file05  -file06  -file07	-file08  -file09
@@ -32,4 +45,10 @@ Now, let's use `cat` to view the contents of the human-readable file.
 ```bash
 bandit4@bandit:~$ cat inhere/-file07
 ```
+
 ***
+
+## Key Concepts
+
+- **File Type Identification**: The `file` command is a powerful utility to determine the type of a file, which is more reliable than just relying on file extensions.
+- **Wildcards**: The `*` wildcard can be used to match all files in a directory, which is useful for running commands on multiple files at once.

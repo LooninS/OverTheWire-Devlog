@@ -1,9 +1,20 @@
 # Bandit Level 1 → Level 2
 
 ## Level Goal
+
 The password for the next level is stored in a file called - located in the home directory
+
 ***
+
+## Commands Used
+
+- `cat`: Display file contents
+- `ls`: List directory contents
+
+***
+
 ## Approach
+
 Naturally, I went with the method I used previously.
 ```bash
 bandit1@bandit:~$ ls
@@ -22,3 +33,9 @@ So, how did I actually get it to work? There are lots of ways I found these:
     ```bash
     cat -- -
     ```
+
+***
+
+## Key Concepts
+
+- **Special Filenames**: Files starting with a hyphen `-` can be misinterpreted as command options. Using `./` or `--` ensures they are treated as file paths.

@@ -1,12 +1,23 @@
 # Bandit Level 6 → Level 7
+
 ## Level Goal
+
 The password for the next level is stored somewhere on the server and has all of the following properties:
 - owned by user bandit7
 - owned by group bandit6
 - 33 bytes in size
+
 ***
 
-### Approach
+## Commands Used
+
+- `find`: Search for files in a directory hierarchy
+- `cat`: Display file contents
+
+***
+
+## Approach
+
 This is a fun one, instead of searching just one directory, I will have to search the entire file system. There is a minor problem though, I don't have the permissions to search the entire file system. So, when I use `find` command with the required parameters, I am flooded with permission denied errors.
 ```bash
 bandit6@bandit:/$ find . -size 33c -group bandit6 -user bandit7
@@ -30,7 +41,14 @@ bandit6@bandit:/$ find . -size 33c -group bandit6 -user bandit7 2> /dev/null
 ./var/lib/dpkg/info/bandit7.password
 bandit6@bandit:/$ cat ./var/lib/dpkg/info/bandit7.password
 ```
+
 ***
+
+## Key Concepts
+
+- **File Ownership and Permissions**: This level highlights the importance of file ownership (`user` and `group`) and how it can be used as a search criterion.
+- **Redirecting Output**: The `2> /dev/null` command is a useful technique for redirecting error messages (stderr) to `/dev/null`, effectively silencing them and making the output of a command cleaner.
+
 <details>
   <summary>Click to reveal spoiler</summary>
 

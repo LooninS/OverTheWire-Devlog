@@ -1,8 +1,19 @@
 # Bandit Level 2 → Level 3
+
 ## Level Goal
+
 The password for the next level is stored in a file called spaces in this filename located in the home directory.
+
 ***
+
+## Commands Used
+
+- `cat`: Display file contents
+
+***
+
 ## Approach
+
 ```bash
 bandit2@bandit:~$ cat spaces in this filename
 cat: spaces: No such file or directory
@@ -15,11 +26,9 @@ The solution is to use ''. This tells the shell to treat entire string as a sing
 ```bash
 bandit2@bandit:~$ cat 'spaces in this filename'
 ```
-***
-## Key Takeaway 
-*Problem*: Spaces in filenames break shell parsing.
 
-*Solution*: Use quotes to group words into single argument.
-
-*Command*: `cat 'filename with spaces'`
 ***
+
+## Key Concepts
+
+- **Shell Argument Parsing**: The shell interprets spaces as delimiters for arguments. To treat a string with spaces as a single argument, it must be enclosed in quotes (e.g., `'filename with spaces'`).
