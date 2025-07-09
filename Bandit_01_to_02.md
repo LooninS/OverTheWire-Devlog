@@ -22,7 +22,8 @@ bandit1@bandit:~$ ls
 bandit1@bandit:~$ cat -
 ```
 Why does it not work? The file is right there; I even checked it with `ls`.
-For many commands, `command -` means "read from STDIN" and when the terminal sees `-` it thinks, "Ah, it's an option, not a filename."
+For many commands, `command -` means "read from STDIN" and when the terminal sees `-` it thinks, "Ah, 
+it's an option, not a filename."
 So, how did I actually get it to work? There are lots of ways I found these:
 
 1. Using `./` will explicitly tell the shell, "this is a path" 
