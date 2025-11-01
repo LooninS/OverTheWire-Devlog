@@ -14,11 +14,9 @@ The password for the next level is stored in a file called spaces in this filena
 
 ## Commands Used
 
-<<<<<<< HEAD
 - `base64`: Built-in Linux utility for base64 operations
 =======
 - `cat`: Display file contents
->>>>>>> ccf94c3 (standarizing the filenames)
 
 ***
 
@@ -43,7 +41,6 @@ bandit2@bandit:~$ cat 'spaces in this filename'
 
 ## Key Concepts
 
-<<<<<<< HEAD
 - **Base64 Encoding/Decoding**: Understanding Base64 as a common encoding scheme for binary data, often used for transmitting data over mediums that only support text. The `base64` command provides a straightforward way to encode and decode such data.
 
 <details>
