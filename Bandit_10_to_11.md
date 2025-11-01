@@ -22,7 +22,7 @@ This is my solution:
 bandit7@bandit:~$ cat data.txt  | grep "millionth"
 ```
 The `cat` command display all the contents of `data.txt`, then `|` operator takes the output of cat command and give it to `grep` command, which displays the lline with the word 'millionth'
-=======
+
 ```bash
 base64 -d data.txt
 ```
