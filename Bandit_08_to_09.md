@@ -8,14 +8,12 @@ The password for the next level is stored in the file data.txt and is the only l
 
 ## Commands Used
 
-<<<<<<< HEAD
 - `find`: Search for files in a directory hierarchy
 - `man`: Display the manual for a command
 - `grep`: Print lines that match patterns
 - `cat`: Display file contents
 - `uniq`: Report or omit repeated lines
 - `sort`: Sort lines of text files
->>>>>>> ccf94c3 (standarizing the filenames)
 
 ***
 
