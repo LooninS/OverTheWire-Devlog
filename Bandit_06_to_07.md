@@ -11,7 +11,6 @@ The password for the next level is stored somewhere on the server and has all of
 
 ## Commands Used
 
-<<<<<<< HEAD
 - `ls`: List directory contents
 - `find`: Search for files in a directory hierarchy
 - `cat`: Display file contents
