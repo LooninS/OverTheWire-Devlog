@@ -14,7 +14,6 @@ The password for the next level is stored in a file somewhere under the inhere d
 - `find`: Search for files in a directory hierarchy
 - `man`: Display the manual for a command
 - `grep`: Print lines that match patterns
->>>>>>> ccf94c3 (standarizing the filenames)
 - `cat`: Display file contents
 
 ***
