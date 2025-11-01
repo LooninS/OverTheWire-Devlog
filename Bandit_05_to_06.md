@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-# Bandit Level 2 → Level 3
-
-## Level Goal
-
-The password for the next level is stored in a file called spaces in this filename located in the home directory.
-=======
 # Bandit Level 5 → Level 6
 
 ## Level Goal
@@ -14,14 +7,10 @@ The password for the next level is stored in a file somewhere under the inhere d
 - human-readable
 - 1033 bytes in size
 - not executable
->>>>>>> ccf94c3 (standarizing the filenames)
 
 ***
 
 ## Commands Used
-
-<<<<<<< HEAD
-=======
 - `find`: Search for files in a directory hierarchy
 - `man`: Display the manual for a command
 - `grep`: Print lines that match patterns
@@ -32,7 +21,6 @@ The password for the next level is stored in a file somewhere under the inhere d
 
 ## Approach
 
-<<<<<<< HEAD
 ```bash
 bandit2@bandit:~$ cat spaces in this filename
 cat: spaces: No such file or directory
@@ -68,14 +56,12 @@ bandit5@bandit:~$ find . -type f -size 1033c ! -executable -exec file {} + | gre
 The `-exec file {} +` runs the `file` command over the output of the `find` command and output the filetypes and `| grep "text"` "text": filters the output of file to only show entries that contain the word “text”. It's clear that the file is human-readable, non-executable, and is exactly 1033 bytes in size.
 ```bash
 bandit5@bandit:~$ cat ./inhere/maybehere07/.file2
->>>>>>> ccf94c3 (standarizing the filenames)
 ```
 
 ***
 
 ## Key Concepts
 
-<<<<<<< HEAD
 - **Shell Argument Parsing**: The shell interprets spaces as delimiters for arguments. To treat a string with spaces as a single argument, it must be enclosed in quotes (e.g., `'filename with spaces'`).
 =======
 - **File Attribute-Based Searching**: This level demonstrates how to search for files based on their metadata (like size and permissions) rather than their name or content. The `find` command is the primary tool for this.
