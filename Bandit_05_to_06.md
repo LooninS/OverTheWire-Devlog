@@ -72,4 +72,3 @@ bandit5@bandit:~$ cat ./inhere/maybehere07/.file2
   The password is HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 </details>
 
->>>>>>> ccf94c3 (standarizing the filenames)
