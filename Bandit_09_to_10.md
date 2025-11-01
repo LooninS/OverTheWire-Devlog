@@ -2,26 +2,21 @@
 
 ## Level Goal
 
-The password for the next level is stored in the file data.txt in one of the few human-readable strings, preceded by several ‘=’ characters.
->>>>>>> ccf94c3 (standarizing the filenames)
+The password for the next level is stored in the file data.txt in one of the few human-readable strings, preceded by several  ‘=’  characters.
 
 ***
 
 ## Commands Used
 
-<<<<<<< HEAD
 - `find`: Search for files in a directory hierarchy
 - `cat`: Display file contents
-=======
 - `strings`: Print the sequences of printable characters in files
 - `grep`: Search for patterns in files
->>>>>>> ccf94c3 (standarizing the filenames)
 
 ***
 
 ## Approach
 
-<<<<<<< HEAD
 This is a fun one, instead of searching just one directory, I will have to search the entire file system. There is a minor problem though, I don't have the permissions to search the entire file system. So, when I use `find` command with the required parameters, I am flooded with permission denied errors.
 ```bash
 bandit6@bandit:/$ find . -size 33c -group bandit6 -user bandit7
@@ -70,18 +65,14 @@ bandit9@bandit:~$ strings data.txt | grep '==='
 
 ## Key Concepts
 
-<<<<<<< HEAD
 - **File Ownership and Permissions**: This level highlights the importance of file ownership (`user` and `group`) and how it can be used as a search criterion.
 - **Redirecting Output**: The `2> /dev/null` command is a useful technique for redirecting error messages (stderr) to `/dev/null`, effectively silencing them and making the output of a command cleaner.
-=======
 - **Extracting Human-Readable Strings**: The `strings` command is invaluable for extracting human-readable text from binary files or files with mixed content, which is often a crucial step in analyzing unknown data.
 - **Filtering Output with `grep`**: Combining `strings` with `grep` allows for efficient filtering of potentially large outputs, helping to pinpoint relevant information based on specific patterns.
 >>>>>>> ccf94c3 (standarizing the filenames)
 
 <details>
   <summary>Click to reveal spoiler</summary>
-
-<<<<<<< HEAD
   The password is morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 </details>
 
