@@ -70,5 +70,3 @@ The `cat` command display all the contents of `data.txt`, then `|` operator take
 
   The password is dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 </details>
-
->>>>>>> ccf94c3 (standarizing the filenames)
