@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Bandit Level 10 → Level 11
 
 ## Level Goal
@@ -10,7 +9,6 @@ The password for the next level is stored in the file data.txt, which contains b
 ## Level Goal
 
 The password for the next level is stored in a file called spaces in this filename located in the home directory.
->>>>>>> ccf94c3 (standarizing the filenames)
 
 ***
 
@@ -27,7 +25,6 @@ The password for the next level is stored in a file called spaces in this filena
 ## Approach
 
 ```bash
-<<<<<<< HEAD
 base64 -d data.txt
 =======
 bandit2@bandit:~$ cat spaces in this filename
@@ -40,7 +37,6 @@ Shell treats each space-separated word as a different argument.
 The solution is to use ''. This tells the shell to treat entire string as a single argument
 ```bash
 bandit2@bandit:~$ cat 'spaces in this filename'
->>>>>>> ccf94c3 (standarizing the filenames)
 ```
 
 ***
