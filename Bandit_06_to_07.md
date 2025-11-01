@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-# Bandit Level 3 → Level 4
-
-## Level Goal
-
-The password for the next level is stored in a hidden file in the inhere directory.
-=======
 # Bandit Level 6 → Level 7
 
 ## Level Goal
@@ -13,7 +6,6 @@ The password for the next level is stored somewhere on the server and has all of
 - owned by user bandit7
 - owned by group bandit6
 - 33 bytes in size
->>>>>>> ccf94c3 (standarizing the filenames)
 
 ***
 
@@ -21,16 +13,13 @@ The password for the next level is stored somewhere on the server and has all of
 
 <<<<<<< HEAD
 - `ls`: List directory contents
-=======
 - `find`: Search for files in a directory hierarchy
 - `cat`: Display file contents
->>>>>>> ccf94c3 (standarizing the filenames)
 
 ***
 
 ## Approach
 
-<<<<<<< HEAD
 ```bash
 bandit3@bandit:~$ ls
 inhere
@@ -65,13 +54,11 @@ bandit6@bandit:/$ find . -size 33c -group bandit6 -user bandit7 2> /dev/null
 ./var/lib/dpkg/info/bandit7.password
 bandit6@bandit:/$ cat ./var/lib/dpkg/info/bandit7.password
 ```
->>>>>>> ccf94c3 (standarizing the filenames)
 
 ***
 
 ## Key Concepts
 
-<<<<<<< HEAD
 - **Hidden Files**: In Linux, files and directories that start with a dot (`.`) are hidden from normal view. The `ls -a` command can be used to display them.
 =======
 - **File Ownership and Permissions**: This level highlights the importance of file ownership (`user` and `group`) and how it can be used as a search criterion.
@@ -82,6 +69,5 @@ bandit6@bandit:/$ cat ./var/lib/dpkg/info/bandit7.password
 
   The password is morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 </details>
->>>>>>> ccf94c3 (standarizing the filenames)
 
 
