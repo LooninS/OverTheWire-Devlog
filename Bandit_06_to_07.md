@@ -19,17 +19,6 @@ The password for the next level is stored somewhere on the server and has all of
 
 ## Approach
 
-```bash
-bandit3@bandit:~$ ls
-inhere
-bandit3@bandit:~$ ls inhere
-```
-Hmm, there is nothing there...or the files are just hidden. The files start with `.` are invisible to the normal `ls` 
-```bash
-bandit3@bandit:~$ ls -a
-```
-**Fun Fact**: `ls`=list and `cat`=concatenate
-=======
 This is a fun one, instead of searching just one directory, I will have to search the entire file system. There is a minor problem though, I don't have the permissions to search the entire file system. So, when I use `find` command with the required parameters, I am flooded with permission denied errors.
 ```bash
 bandit6@bandit:/$ find . -size 33c -group bandit6 -user bandit7
@@ -57,16 +46,6 @@ bandit6@bandit:/$ cat ./var/lib/dpkg/info/bandit7.password
 ***
 
 ## Key Concepts
-
-- **Hidden Files**: In Linux, files and directories that start with a dot (`.`) are hidden from normal view. The `ls -a` command can be used to display them.
-=======
 - **File Ownership and Permissions**: This level highlights the importance of file ownership (`user` and `group`) and how it can be used as a search criterion.
 - **Redirecting Output**: The `2> /dev/null` command is a useful technique for redirecting error messages (stderr) to `/dev/null`, effectively silencing them and making the output of a command cleaner.
-
-<details>
-  <summary>Click to reveal spoiler</summary>
-
-  The password is morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
-</details>
-
 
