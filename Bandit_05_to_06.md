@@ -20,18 +20,6 @@ The password for the next level is stored in a file somewhere under the inhere d
 
 ## Approach
 
-```bash
-bandit2@bandit:~$ cat spaces in this filename
-cat: spaces: No such file or directory
-cat: in: No such file or directory
-cat: this: No such file or directory
-cat: filename: No such file or directory
-```
-Shell treats each space-separated word as a different argument.
-The solution is to use ''. This tells the shell to treat entire string as a single argument
-```bash
-bandit2@bandit:~$ cat 'spaces in this filename'
-=======
 Started completely blind on the `find` command syntax. Time to RTFM.
 ```bash
 bandit5@bandit:~$ man find
@@ -60,15 +48,5 @@ bandit5@bandit:~$ cat ./inhere/maybehere07/.file2
 ***
 
 ## Key Concepts
-
-- **Shell Argument Parsing**: The shell interprets spaces as delimiters for arguments. To treat a string with spaces as a single argument, it must be enclosed in quotes (e.g., `'filename with spaces'`).
-=======
 - **File Attribute-Based Searching**: This level demonstrates how to search for files based on their metadata (like size and permissions) rather than their name or content. The `find` command is the primary tool for this.
 - **Command Chaining and Filtering**: The solution showcases the power of combining commands. The output of `find` is piped to `grep` to filter the results, and the `-exec` option is used to run `file` on the results of `find`. This is a common and powerful pattern in the shell.
-
-<details>
-  <summary>Click to reveal spoiler</summary>
-
-  The password is HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
-</details>
-
