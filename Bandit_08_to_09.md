@@ -19,30 +19,6 @@ The password for the next level is stored in the file data.txt and is the only l
 
 ## Approach
 
-Started completely blind on the `find` command syntax. Time to RTFM.
-```bash
-bandit5@bandit:~$ man find
-```
-After reading the manual, I identified the following parameters:
-
-- `-type f` – find files
-- `-size 1033c` – find files that are 1033 bytes in size
-- `-executable` – find files that are executable
-- `!` – negate the next parameter
-Launched the search with minimal parameters:
-```bash
-bandit5@bandit:~$ find . -type f -size 1033c ! -executable
-./inhere/maybehere07/.file2
-```
-It's seem two parameters were enough to find the file, but let's verify that the file is indeed human-readable.
-```bash
-bandit5@bandit:~$ find . -type f -size 1033c ! -executable -exec file {} + | grep "text"
-./inhere/maybehere07/.file2: ASCII text, with very long lines (1000)
-```
-The `-exec file {} +` runs the `file` command over the output of the `find` command and output the filetypes and `| grep "text"` "text": filters the output of file to only show entries that contain the word “text”. It's clear that the file is human-readable, non-executable, and is exactly 1033 bytes in size.
-```bash
-bandit5@bandit:~$ cat ./inhere/maybehere07/.file2
-=======
 I had absolutely no idea how to tackle this one. The "Commands you may need to solve this level" section listed several tools I'd never used before, so I did what any reasonable person would do: I asked ChatGPT to explain each one.
 After reading through the explanations, `uniq` seemed like the most promising candidate for finding unique lines. Time to dive deeper with `man uniq`:
 ```markdown
@@ -74,15 +50,7 @@ bandit8@bandit:~$ sort data.txt | uniq -u
 ***
 ## Key Concepts
 
-- **File Attribute-Based Searching**: This level demonstrates how to search for files based on their metadata (like size and permissions) rather than their name or content. The `find` command is the primary tool for this.
-- **Command Chaining and Filtering**: The solution showcases the power of combining commands. The output of `find` is piped to `grep` to filter the results, and the `-exec` option is used to run `file` on the results of `find`. This is a common and powerful pattern in the shell.
-=======
 - **`uniq` command behavior**: Understanding that `uniq` only operates on *adjacent* lines is crucial. This highlights the importance of reading man pages carefully.
 - **Combining `sort` and `uniq`**: To find truly unique lines in a file, `sort` must be used before `uniq` to bring identical lines together.
 - **Piping for sequential processing**: This level further demonstrates the power of piping commands to process data sequentially, where the output of one command becomes the input of the next.
-
-<details>
-  <summary>Click to reveal spoiler</summary>
-  The password is 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
-</details>
-
+***
