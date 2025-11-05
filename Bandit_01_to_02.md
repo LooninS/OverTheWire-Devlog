@@ -32,7 +32,7 @@ So, how did I actually get it to work? There are lots of ways I found these:
     ```
 2. Using `--` can also work like so
     ```bash
-    cat -- -
+    cat -- "-"
     ```
 
 ***
